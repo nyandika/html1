@@ -1,0 +1,22 @@
+.float{
+    float: top;
+    margin: auto;
+}
+.text-block{
+    text-align: left;
+    margin: auto;
+    width: 50%;
+    font-size: 70%;
+
+    }
+
+.container{
+    display: grid;
+     height: 50%;
+     width: 45%;
+}
+.head{
+    font-size: 10%;
+    position: relative;
+}
+
