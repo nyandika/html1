@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <h2>Form Validation and submit</h2>
+
+    <form method="POST">
+        <label for="first_name">First name:</label><br>
+        <input type="text" id="first_name" name="first_name" value=""><br>
+        <label for="last_name">Last name:</label><br>
+        <input type="text" id="last_name" name="last_name" value=""><br><br>
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            event.preventDefault();     // Stop form from submitting so that we do some validation
+
+            const firstName = document.getElementById('first_name').value;
+            const lastName = document.getElementById('last_name').value;
+
+            if (!firstName || firstName === "") {
+                alert('Enter first name');
+                return;
+            }
+
+            if (!lastName || lastName === "") {
+                alert('Enter last name');
+                return;
+            }
+
+
+            // After validation go ahead and proceed
+            window.location.href = 'index.html'     // Ideally we should have actions that the submit will do, but in this case just route to a url and handle response that side
+        }
+    </script>
+
+</body>
+
+</html>
